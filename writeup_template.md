@@ -126,6 +126,9 @@ Why I chose LeNet Architecture, because it is a proved good architecture for tra
 | Softmax				| etc.        									|
 |						|												|
 |						|												|
+
+|				mu		|	sigma											|dropout|EPOCHS|BATCH_SIZE|rate|
+|			0			|		0.1										|None|10|128|0.001
 In preprocessing of image I have 
 grayscale
 If an iterative approach was chosen:
