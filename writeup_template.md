@@ -45,11 +45,11 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of the validation set is 4410
+* The size of test set is 12630
+* The shape of a traffic sign image is 32x32x3
+* The number of unique classes/labels in the data set is 43
 
 #### 2. Include an exploratory visualization of the dataset.
 
@@ -128,9 +128,12 @@ Why I chose LeNet Architecture, because it is a proved good architecture for tra
 |						|												|
 
 
-|				mu		|	sigma	|dropout|EPOCHS|BATCH_SIZE|rate|
-|:------:|:-----:|:------:|:-----:|:------:|:-----:| 
-|			0			|		0.1										|None|10|128|0.001|
+|			mu	|	sigma	|dropout|EPOCHS|BATCH_SIZE|rate|
+|:----:|:-----:|:------:|:-----:|:------:|:-----:| 
+|			0		|		0.1		|None|10|128|0.001|
+
+with the initial architecture the validation accuracy has 90%. The validation accuracy with augmention is 88.6%.
+Increase the EPOCHS to 50. 
 In preprocessing of image I have 
 grayscale
 If an iterative approach was chosen:
