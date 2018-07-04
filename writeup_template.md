@@ -1,37 +1,6 @@
 # **Traffic Sign Recognition** 
 
-## Writeup
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
-**Build a Traffic Sign Recognition Project**
-
-The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-
-## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
----
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
@@ -40,10 +9,10 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 ### Data Set Summary & Exploration
 
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. There are three groups of data set: training set, validation set and test set.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+The summary statistics of the traffic
+signs data set are as this:
 
 * The size of training set is 34799
 * The size of the validation set is 4410
@@ -60,6 +29,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+I generated additional data for the sign class, in which the total number is less than 750. 
 
 As a first step, I decided to convert the images to grayscale because ...
 
@@ -133,7 +103,21 @@ Why I chose LeNet Architecture, because it is a proved good architecture for tra
 |			0		|		0.1		|None|10|128|0.001|
 
 with the initial architecture the validation accuracy has 90%. The validation accuracy with augmention is 88.6%.
-Increase the EPOCHS to 50. 
+Increase the EPOCHS to 50, which improve the validation accuracy to 92%. But it also shows overfitting.
+Then rate from 0.001 to 0.002, the maximal validation acccuracy in 10 EPOCHS is 90%, and there is overfitting after 5 EPOCHS alredy.
+sigma from 0.1 to 0.2, the validation accuracy is 90%
+
+Try to change the input and output number in full-connected layer, 400, 320, 180, 43, the validation accuracy increased.89.5% 
+Try to add dropout in each full-connected layer, , dropout 0.75 in the first fully connnected layer, 87.7%
+dropout 0.75 in the second fully connnected layer, 89.2%
+dropout 0.75 in the third fully connected layer, 92.4%
+dropout 0.8 in the third fully connected layer, 92.5%
+dropout 0.7 in the third fully connected layer, 90%
+
+change the first layer number of features, 10, 88.6%
+change the first layer number of features, 4, 89%
+180-->200, 92.8% 
+As the start accuracy is not low, therefore,
 In preprocessing of image I have 
 grayscale
 If an iterative approach was chosen:
