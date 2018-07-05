@@ -4,15 +4,15 @@
 
 [image1]: ./Used_Images/Distribution_Training.png "Distribution"
 [image2]: ./Used_Images/Distribution_Training_Augmentation.png "Distribution_Augmentation"
-
+[image3]: ./Used_Images/Figure_Processing.png "Figure_Processing"
+[image4]: ./Used_Images/Figure_Processing.png "Transform_Processing"
 ---
 
 
 ### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### In this project deep learning is uesed to recognize the 43 german traffic signs. LeNet5 architecture is the basic structurer of the model, then pre-processing, for example, grayscale and normalization, is applied. Since the distribution of 43 classes are not balance, augmentation of images are added to improve the validation accuracy. After trying to change the parameters, for example, epochs, batch number, dropout rate, the validation accuracy reached 95.7%.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -29,20 +29,21 @@ signs data set are as this:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how each class of traffic sign data distributed. It is shown that, some classes have much more data than the other classes. The maximal number of one class is 
 
 ![alt text][image1]
 
 ### Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-I generated additional data for the sign class, in which the total number is less than 750. 
+#### 1. Only grayscale and normalization are used to pre-process the images. etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+I generated additional data for the sign class, in which the total number is less than 750. After augmentation the difference between different classes are less.
+![alt text][image2]
 
 As a first step, I decided to convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
+![alt text][image3]
 
-![alt text][image2]
 
 As a last step, I normalized the image data because ...
 
@@ -52,8 +53,9 @@ To add more data to the the data set, I used the following techniques because ..
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
 
+
+![alt text][image4]
 The difference between the original data set and the augmented data set is the following ... 
 
 
@@ -130,6 +132,7 @@ change the first layer number of features, 4, 89%
 As the start accuracy is not low, therefore,
 In preprocessing of image I have 
 grayscale
+
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 * What were some problems with the initial architecture?
