@@ -5,7 +5,7 @@
 [image1]: ./Used Images in writeup/Distribution_Training.png "Distribution"
 [image2]: ./Used Images in writeup/Distribution_Training_Augmentation.png "Distribution_Augmentation"
 
-
+---
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
