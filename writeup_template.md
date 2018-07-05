@@ -2,8 +2,8 @@
 
 [//]: # (Image References)
 
-[image1]: ./Used Images in writeup/Distribution_Training.png "Distribution"
-[image2]: ./Used Images in writeup/Distribution_Training_Augmentation.png "Distribution_Augmentation"
+[image1]: ./Used_Images/Distribution_Training.png "Distribution"
+[image2]: ./Used_Images/Distribution_Training_Augmentation.png "Distribution_Augmentation"
 
 ---
 
