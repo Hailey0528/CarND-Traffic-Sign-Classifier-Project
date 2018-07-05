@@ -39,13 +39,14 @@ In the following, for each sign class one example is shown.
 
 #### 1. Pre-Proccesing of the data set
 Only grayscale and normalization are used to pre-process the images. It shows the difference of before after pre-processing.
-
 ![alt text][image4]
 
 In many articles, augmentation is proven to improve the prediction accuracy. (https://chatbotslife.com/german-sign-classification-using-deep-learning-neural-networks-98-8-solution-d05656bf51ad) And then I generated additional data for the sign class, in which the total number is less than 750. Three augmented images are created with rotation, scaling and transformation. Here is an example of augmented images:
 ![alt text][image5]
+
 After augmentation the difference between different classes are less. The characteristics of the augmented training set are as follows.
 ![alt text][image2]
+
 #### 2. Final model architecture
 
 My final model consisted of the following layers:
