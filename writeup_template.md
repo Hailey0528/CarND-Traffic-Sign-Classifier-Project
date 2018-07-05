@@ -4,7 +4,8 @@
 
 [image1]: ./Used_Images/Distribution_Training.png "Distribution"
 [image2]: ./Used_Images/Distribution_Training_Augmentation.png "Distribution_Augmentation"
-
+[image3]: ./Used_Images/Figure_Processing.png "Figure_Processing"
+[image4]: ./Used_Images/Transform_Processing.png "Transform_Processing"
 ---
 
 
