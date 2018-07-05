@@ -145,7 +145,7 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | 14 Stop Sign      		| 20 Dangerous curve to the right   									| 
 | 33 Turn right ahead     			| 30 Beware of ice/snow 										|
-| 18 General caution				| 28 Yield											|
+| 18 General caution				| 28 Children crossing											|
 | 2 Speed limit 50 km/h	      		| 34 Turn left ahead 				|
 | 4 Speed limit 70 km/h			| 40 Roundabout mandatory      							|
 | 11 Right-of-way at the next intersection		| 11 Right-of-way at the next intersection  	|
