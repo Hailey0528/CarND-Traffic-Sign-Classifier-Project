@@ -12,7 +12,7 @@
 
 ---
 
-#### In this project deep learning is uesed to recognize the 43 german traffic signs. LeNet5 architecture is the basic structurer of the model, then pre-processing, for example, grayscale and normalization, is applied. Since the distribution of 43 classes are not balance, augmentation of images are added to improve the validation accuracy. After trying to change the parameters, for example, epochs, batch number, dropout rate, the validation accuracy reached 96.3%.
+#### In this project deep learning is used to recognize 43 german traffic signs. LeNet5 architecture is the basic structurer of the model, then pre-processing, for example, grayscale and normalization, is applied. Since the distribution of 43 classes are not balance, augmentation of images are added to improve the validation accuracy. After trying to change the parameters, for example, epochs, batch number, dropout rate, the validation accuracy reached 96.3%.
 
 
 
