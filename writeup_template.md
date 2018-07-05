@@ -8,9 +8,6 @@
 
 ---
 
-
-### Writeup / README
-
 #### In this project deep learning is uesed to recognize the 43 german traffic signs. LeNet5 architecture is the basic structurer of the model, then pre-processing, for example, grayscale and normalization, is applied. Since the distribution of 43 classes are not balance, augmentation of images are added to improve the validation accuracy. After trying to change the parameters, for example, epochs, batch number, dropout rate, the validation accuracy reached 96.3%.
 
 
@@ -61,7 +58,7 @@ My final model consisted of the following layers:
 | Fully connected	(3)	| 120 inputs, 43 outputs       									|
 
  
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Then I tried to train the model. 
 
 To train the model, I used an 
 sigma for the random generated data has effect on the 
@@ -72,7 +69,8 @@ My final model results were:
 * training set accuracy of 99.9%
 * validation set accuracy of  96.3% 
 * test set accuracy of 93.6
-Why I chose LeNet Architecture, because it is a proved good architecture for traffic sign classification. The input data of LeNet has one feature, whereas, colorful traffic sign image has three features. Therefore, the number of features should be changed. And the classified groups for LeNet are 10, whereas we need 43. Therefore, the output number should be corrected. 
+
+LeNet architecture is the initial model I choose from course. Why I chose LeNet Architecture? Because it is a proved good architecture for traffic sign classification. The input data of LeNet has one feature, whereas, colorful traffic sign image has three features. Therefore, the number of features should be changed. And the classified groups for LeNet are 10, whereas we need 43. Therefore, the output number should be corrected. The original model consists the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -87,44 +85,21 @@ Why I chose LeNet Architecture, because it is a proved good architecture for tra
 | Fully connected (2)		| 120 inputs, 84 outputs        									|
 | Fully connected (3)		| 84 inputs, 34 outputs        									|
 | Softmax				| etc.        									|
-|						|												|
-|						|												|
 
+With the initial model and with the values of parameters in the following, the validation accuracy is around 89%.
 
 |			mu	|	sigma	|dropout|EPOCHS|BATCH_SIZE|rate|
 |:----:|:-----:|:------:|:-----:|:------:|:-----:| 
 |			0		|		0.1		|None|10|128|0.001|
 
-with the initial architecture the validation accuracy has 90%. The validation accuracy with augmention is 88.6%.
-Increase the EPOCHS to 50, which improve the validation accuracy to 92%. But it also shows overfitting.
-Then rate from 0.001 to 0.002, the maximal validation acccuracy in 10 EPOCHS is 90%, and there is overfitting after 5 EPOCHS alredy.
+Then I tried to increase or decrease one of the parameters once to check if the change can imorove the accuracy.
+1. Increase the EPOCHS to 50, which improve the validation accuracy to 92%. But it also shows overfitting.
+2. Increase iteration rate from 0.001 to 0.002, the maximal validation acccuracy in 10 EPOCHS is 90%.
 sigma from 0.1 to 0.2, the validation accuracy is 90%
-
-Try to change the input and output number in full-connected layer, 400, 320, 180, 43, the validation accuracy increased.89.5% 
-Try to add dropout in each full-connected layer, , dropout 0.75 in the first fully connnected layer, 87.7%
-dropout 0.75 in the second fully connnected layer, 89.2%
-dropout 0.75 in the third fully connected layer, 92.4%
-dropout 0.8 in the third fully connected layer, 92.5%
-dropout 0.7 in the third fully connected layer, 90%
-
-change the first layer number of features, 10, 88.6%
-change the first layer number of features, 4, 89%
-180-->200, 92.8% 
-As the start accuracy is not low, therefore,
-In preprocessing of image I have 
-grayscale
-
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+3. Sigma can improve the start accuracy but hasn't improved the final result.
+4. BATCH_SIZE can also not improve the accuracy obvious.
+5. Try to change the input and output number in full-connected layer, 400, 320, 180, 43, the validation accuracy increased to 89.5%. Try to the output number of each full-connected layer, it shows the output number of the third fully connected layer has largest effect on the accuracy. 
+6. Try to add dropout in each full-connected layer seperately. With dropout 0.75 in the first fully connnected layer the accuracy is 87.7%. With dropout 0.75 in the second fully connnected layer, the result is 89.2%. With dropout 0.75 in the third fully connected layer, the accuracy increased to 92.4%, which is a big improvement. Then I tried dropout 0.85, 0.8 and 0.7 in the third fully connected layer, dropout 0.8 is the best choice.
  
 
 ### Test a Model on New Images
