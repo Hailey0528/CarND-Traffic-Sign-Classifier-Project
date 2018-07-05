@@ -57,13 +57,9 @@ My final model consisted of the following layers:
 | dropout				| 0.8     									|
 | Fully connected	(3)	| 120 inputs, 43 outputs       									|
 
- 
-#### 3. Then I tried to train the model. 
 
-To train the model, I used an 
-sigma for the random generated data has effect on the 
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 3. Approach to find a solution to have high accuracy and to train the model
 
 My final model results were:
 * training set accuracy of 99.9%
@@ -108,7 +104,7 @@ sigma from 0.1 to 0.2, the validation accuracy is 90%
 
 Here are ten German traffic signs that I found on the web:
 
-![alt text][image4] 
+![alt text][image3] 
 
 The first, fifth and seventh image might be difficult to classify because the traffic sign is small compared with the whole image. The second and eighth are quite similar, which might different to identify. The sixth and ninth images are clear, and there is no any object in the image, they might be easy to classify.In third, fourth and tenth there is other object, it is difficult to say, if it is easy to classify correctly.
 
