@@ -5,8 +5,8 @@
 [image1]: ./Used_Images/Distribution_Training.png "Distribution"
 [image2]: ./Used_Images/Distribution_Training_Augmentation.png "Distribution_Augmentation"
 [image3]: ./Used_Images/Sign.png "Traffic_sign"
-[image4]: ./Used_Images/Sign.png "Traffic_sign"
-[image5]: ./Used_Images/Sign.png "Traffic_sign"
+[image4]: ./Used_Images/Figure_Processing.png "Figure_Processing"
+[image5]: ./Used_Images/Transform_Processing.png "Transform_Processing"
 [image6]: ./Used_Images/Image_Online.png "Image_Online"
 
 
@@ -41,7 +41,7 @@ In the following, for each sign class one example is shown.
 Only grayscale and normalization are used to pre-process the images. It shows the difference of before after pre-processing.
 ![alt text][image4]
 In many articles, augmentation is proven to improve the prediction accuracy. (https://chatbotslife.com/german-sign-classification-using-deep-learning-neural-networks-98-8-solution-d05656bf51ad) And then I generated additional data for the sign class, in which the total number is less than 750. Three augmented images are created with rotation, scaling and transformation. Here is an example of augmented images:
-![alt text][image4]
+![alt text][image5]
 After augmentation the difference between different classes are less. The characteristics of the augmented training set are as follows.
 ![alt text][image2]
 
