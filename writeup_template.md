@@ -7,12 +7,13 @@
 [image3]: ./Used_Images/Sign.png "Traffic_sign"
 [image4]: ./Used_Images/Sign.png "Traffic_sign"
 [image5]: ./Used_Images/Sign.png "Traffic_sign"
-[image6]: ./Used_Images/Sign.png "Traffic_sign"
+[image6]: ./Used_Images/Image_Online.png "Image_Online"
 
 
 ---
 
 #### In this project deep learning is uesed to recognize the 43 german traffic signs. LeNet5 architecture is the basic structurer of the model, then pre-processing, for example, grayscale and normalization, is applied. Since the distribution of 43 classes are not balance, augmentation of images are added to improve the validation accuracy. After trying to change the parameters, for example, epochs, batch number, dropout rate, the validation accuracy reached 96.3%.
+
 
 
 ### Data Set Summary & Exploration
