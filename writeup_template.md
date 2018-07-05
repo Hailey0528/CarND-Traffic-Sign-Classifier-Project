@@ -32,17 +32,18 @@ signs data set are as this:
 Here is an exploratory visualization of the data set. It is a bar chart showing how each class of traffic sign data distributed. It is shown that, some classes have much more data than the other classes. The maximal number of one class is 
 
 ![alt text][image1]
-
+![alt text][image3]
 ### Design and Test a Model Architecture
 
 #### 1. Only grayscale and normalization are used to pre-process the images. etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 I generated additional data for the sign class, in which the total number is less than 750. After augmentation the difference between different classes are less.
+
 ![alt text][image2]
 
 As a first step, I decided to convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
-![alt text][image3]
+
 
 
 As a last step, I normalized the image data because ...
