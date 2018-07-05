@@ -135,9 +135,9 @@ Here are ten German traffic signs that I found on the web:
 
 ![alt text][image4] 
 
-The first, fifth and seventh image might be difficult to classify because the traffic sign is small compared with the whole image. The second and eighth are quite similar, which might different to identify. The sixth and ninth images are clear, and there is no any object in the image, they might be easy to classify.
+The first, fifth and seventh image might be difficult to classify because the traffic sign is small compared with the whole image. The second and eighth are quite similar, which might different to identify. The sixth and ninth images are clear, and there is no any object in the image, they might be easy to classify.In third, fourth and tenth there is other object, it is difficult to say, if it is easy to classify correctly.
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set.
 
 Here are the results of the prediction:
 
@@ -157,11 +157,12 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 2 of the 10 traffic signs, which gives an accuracy of 20%. This compares favorably to the accuracy on the test set is low.
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the last second cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image Stop Sign, the model is relatively sure that this is a Beware of ice/snow sign (probability of 0.6). The top five soft max probabilities were:
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | .60         			| 30 Beware of ice/snow  									| 
@@ -169,6 +170,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .14					| 17 No entry											|
 | .09	      			| 38 Keep right					 				|
 | .02				    | 1 Speed limit 30     							|
+
+For the second image Turn right ahead, the model is very sure that this is a Beware of ice/snow sign (probability of 0.94). The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -178,6 +181,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .01	      			| 28 Children crossing					 				|
 | .00				    | 23 Slippery Road      							|
 
+For the third image General caution, the model is very sure that this is a Children crossing (probability of 1). The top five soft max probabilities were:
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.00         			| 28 Children crossing									| 
@@ -185,6 +190,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00					| 36 Go straight or right											|
 | .00	      			| 9 No passing					 				|
 | .00				    | 3 Speed limit 60      							|
+
+For the forth image Speed limit 50 km/h, the model is very sure that this is a slippery road sign (probability of 0.85). The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -194,6 +201,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00	      			| 30 Beware of ice/snow					 				|
 | .00				    | 37 Go straight or left      							|
 
+For the fifth image Speed limit 70 km/h, the model is very sure that this is a slippery road sign (probability of 0.98). The top five soft max probabilities were:
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | .98         			| 40 Roundabout mandatory									| 
@@ -201,6 +210,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00					| 37 Go straight or left											|
 | .00	      			| 27 Pedestrians					 				|
 | .00				    | 29 Bicycle crossing        							|
+
+For the sixth image Right-of-way at the next intersection, the model is very sure that this is Right-of-way at the next intersection (probability of 1). The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -210,6 +221,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00	      			| 19 Dangerous	curve to the left				 				|
 | .00				    | 12 Priority Road      							|
 
+For the seventh image Wild animals crossing, the model is very sure that this is Go straight or left (probability of 0.997). The top five soft max probabilities were:
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | .997         			| 37 Go straight or left									| 
@@ -217,6 +230,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00					| 40 Roundabout mandatory											|
 | .00	      			| 39 Keep left					 				|
 | .00				    | 0 Speed limit 20      							|
+
+For the eighth image Roundabout mandatory, the model is very sure that this is Turn right ahead (probability of 0.996). The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -226,6 +241,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00	      			| 35 Ahead only					 				|
 | .00				    | 25 Road work      				|
 
+For the ninth image Priority road, the model is very sure that this is Priority road (probability of 0.996). The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -234,6 +250,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00					| 18 General caution											|
 | .00	      			| 15 No vehicles					 				|
 | .00				    | 28 Children crossing      				|
+
+For the tenth image Slippery road, the model is very sure that this is Turn left ahead (probability of 0.96). The top five soft max probabilities were:
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -244,7 +262,5 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00				    | 40 Roundabout mandatory      				|
 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
 
