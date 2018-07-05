@@ -5,7 +5,9 @@
 [image1]: ./Used_Images/Distribution_Training.png "Distribution"
 [image2]: ./Used_Images/Distribution_Training_Augmentation.png "Distribution_Augmentation"
 [image3]: ./Used_Images/Sign.png "Traffic_sign"
-
+[image4]: ./Used_Images/Sign.png "Traffic_sign"
+[image5]: ./Used_Images/Sign.png "Traffic_sign"
+[image6]: ./Used_Images/Sign.png "Traffic_sign"
 ---
 
 #### In this project deep learning is uesed to recognize the 43 german traffic signs. LeNet5 architecture is the basic structurer of the model, then pre-processing, for example, grayscale and normalization, is applied. Since the distribution of 43 classes are not balance, augmentation of images are added to improve the validation accuracy. After trying to change the parameters, for example, epochs, batch number, dropout rate, the validation accuracy reached 96.3%.
@@ -33,10 +35,11 @@ In the following, for each sign class one example is shown.
 ### Design and Test a Model Architecture
 
 #### 1. Pre-Proccesing of the data set
-Only grayscale and normalization are used to pre-process the images. As a first step, I decided to convert the images to grayscale because ...
-Here is an example of a traffic sign image before and after grayscaling.As a last step, I normalized the image data because 
-
-I generated additional data for the sign class, in which the total number is less than 750. After augmentation the difference between different classes are less. The characteristics of the augmented training set are as follows.
+Only grayscale and normalization are used to pre-process the images. It shows the difference of before after pre-processing.
+![alt text][image4]
+In many articles, augmentation is proven to improve the prediction accuracy. (https://chatbotslife.com/german-sign-classification-using-deep-learning-neural-networks-98-8-solution-d05656bf51ad) And then I generated additional data for the sign class, in which the total number is less than 750. Three augmented images are created with rotation, scaling and transformation. Here is an example of augmented images:
+![alt text][image4]
+After augmentation the difference between different classes are less. The characteristics of the augmented training set are as follows.
 ![alt text][image2]
 
 #### 2. Final model architecture
@@ -104,7 +107,7 @@ sigma from 0.1 to 0.2, the validation accuracy is 90%
 
 Here are ten German traffic signs that I found on the web:
 
-![alt text][image3] 
+![alt text][image6] 
 
 The first, fifth and seventh image might be difficult to classify because the traffic sign is small compared with the whole image. The second and eighth are quite similar, which might different to identify. The sixth and ninth images are clear, and there is no any object in the image, they might be easy to classify.In third, fourth and tenth there is other object, it is difficult to say, if it is easy to classify correctly.
 
